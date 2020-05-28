@@ -1,0 +1,5 @@
+image: registry.plasma-bank.com/blockchain/eos:latest
+
+tasks:
+- before: cleos wallet unlock --password </password
+  command: nodeos --config-dir ~/eosio/chain/config --data-dir ~/eosio/chain/data -e -p eosio --plugin eosio::chain_api_plugin --contracts-console
