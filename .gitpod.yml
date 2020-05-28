@@ -1,4 +1,4 @@
-image: registry.plasma-bank.com/blockchain/eos:latest
+image: plasmachain/plasma-local-node:latest
 
 tasks:
 - before: cleos wallet unlock --password </password
