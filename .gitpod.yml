@@ -1,5 +1,5 @@
-image: plasmachain/plasma-local-node:latest
+image: plasmachain/web-ide-node:latest
 
 tasks:
-- before: cleos wallet unlock --password </password
-  command: nodeos --config-dir ~/eosio/chain/config --data-dir ~/eosio/chain/data -e -p eosio --plugin eosio::chain_api_plugin --contracts-console
+- before: sol wallet unlock --password < /root/wallet-password
+  command: ionode --config ~/config.ini --genesis-json ~/genesis.json --data-dir ~/data 
