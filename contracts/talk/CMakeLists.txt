@@ -10,11 +10,6 @@ message("Found CDT package at: ${ION_CDT_ROOT}")
 ### Generate the wasm and abi
 add_contract(talk talk talk.hpp talk.cpp)
 
-# # Add testing
-# include(CTest)
-# enable_testing()
-# add_subdirectory(./tests)
-
 # Print include directories
 get_property(dirs DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY INCLUDE_DIRECTORIES)
 foreach(dir ${dirs})
