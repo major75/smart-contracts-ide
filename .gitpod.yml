@@ -13,5 +13,8 @@ ports:
     onOpen: ignore
 
 tasks:
+- before: cd webapp
+  init: yarn
+  command: nginx -c $PWD/nginx.conf; npx webpack-dev-server
 - before: sol wallet unlock --password < /root/wallet-password
   command: ionode --config ~/config.ini --genesis-json ~/genesis.json --data-dir ~/data 
