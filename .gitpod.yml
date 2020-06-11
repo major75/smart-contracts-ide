@@ -14,5 +14,5 @@ ports:
 
 tasks:
 - command: webapp/start.sh
-- command: sol wallet unlock --password < /root/wallet-password
-- command: ionode --config ~/config.ini --genesis-json ~/genesis.json --data-dir ~/data 
+- before: sol wallet unlock --password < /root/wallet-password
+  command: ionode --config ~/config.ini --genesis-json ~/genesis.json --data-dir ~/data 
